@@ -1,6 +1,6 @@
 # Yapay Zeka ile Sohbet Kayıtları
 
-
+```
 ### Kullanıcı Mesajı
 -- Kullanıcılar Tablosu
 CREATE TABLE kullanicilar (
@@ -64,7 +64,7 @@ bu kozmatik stok takip sistemim için rastgele veriler oluşturmanı insert into
 
 
 ### Yapay Zeka Yanıtı (Grok 3)
-```sql
+sql
 -- Kullanıcılar için rastgele veri ekleme
 INSERT INTO kullanicilar (kullanici_adi, sifre, tam_isim, email, yetki, kayit_tarihi, son_giris, aktif) VALUES
 ('ayse_yilmaz', 'hashed_password_123', 'Ayşe Yılmaz', 'ayse.yilmaz@example.com', 'admin', '2025-01-10 10:00:00', '2025-06-12 15:30:00', 1),
