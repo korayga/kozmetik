@@ -214,5 +214,5 @@ Bu bölüm, **XAMPP** ve **phpMyAdmin** kullanılarak projeyi yerel sunucuda nas
 - **Oturum Yönetimi**: Oturum açılmadan korunan sayfalara erişim engellenir (`girisKontrol()`).
 
 ## 👥 Geliştirici
-E-posta: koraygarip@gmail.com <br />
-GitHub: [https://github.com/korayga]
+[Linkedin](https://www.linkedin.com/in/koray-garip/) <br />
+[GitHub](https://github.com/korayga)
