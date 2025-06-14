@@ -3,7 +3,7 @@
 Bu proje, kozmetik ürünlerin stok yönetimini kolaylaştırmak için geliştirilmiş bir web tabanlı uygulamadır. PHP ve MySQL kullanılarak oluşturulmuştur ve kullanıcı yönetimi, ürün yönetimi, kategori yönetimi, tedarikçi yönetimi ve stok raporlaması gibi temel işlevsellikleri içerir. Bootstrap 5.3.3 ve Font Awesome 6.5.2 ile modern, kullanıcı dostu ve mobil uyumlu bir arayüz sunulur. Bu proje, bir ödev kapsamında phpMyAdmin ve FTP kullanılarak bir web sunucusuna yüklenecek şekilde tasarlanmıştır.
 
 Siteyi URL : http://95.130.171.20/~st22360859088/index.php <br />
-Tanıtım Youtube Video URL:
+Tanıtım Youtube Video URL: https://youtu.be/BaazUI_Wzyw
 
 ## Özellikler
 
