@@ -50,33 +50,45 @@ Tanıtım Youtube Video URL:
   - FTP istemcisi (örn. FileZilla) ve sunucu erişim bilgileri.
 
 ## Kurulum
-Bu bölüm, phpMyAdmin ve FTP kullanarak sistemin bir web sunucusuna nasıl yükleneceğini açıklar.
 
-### 1. Veritabanını phpMyAdmin ile Kurma
+Bu bölüm, **XAMPP** ve **phpMyAdmin** kullanılarak projeyi yerel sunucuda nasıl çalıştıracağınızı açıklar.
+
 1. **phpMyAdmin'e Giriş Yapın**:
-   - Tarayıcınızda phpMyAdmin arayüzüne gidin (örn. `http://sunucu_adresi/phpmyadmin`).
-   - Sunucu tarafından sağlanan kullanıcı adı ve şifreyi kullanarak oturum açın.
+
+   - Tarayıcınızdan `http://localhost/phpmyadmin` adresine gidin.
+   - Genellikle kullanıcı adı `root`, şifre ise boştur (varsayılan ayar).
 
 2. **Veritabanı Oluşturun**:
-   - phpMyAdmin'de sol üst köşedeki **"Yeni"** (New) butonuna tıklayın.
-   - Veritabanı adı olarak `kozmetik` yazın ve **Oluştur** (Create) butonuna tıklayın.
+
+   - Sol menüede **"Yeni"** butonuna tıklayın.
+   - Veritabanı adını `kozmetik` olarak girin.
+   - **Oluştur** butonuna tıklayın.
 
 3. **SQL Dosyasını İçe Aktarın**:
-   - Oluşturduğunuz `kozmetik` veritabanını seçin.
-   - Üst menüden **İçe Aktar** (Import) sekmesine tıklayın.
-   - `db.sql` dosyasını seçin (proje klasörünüzdeki `db.sql`).
-   - **Git** (Go) butonuna tıklayarak SQL dosyasını çalıştırın.
-   - Bu işlem, `kullanicilar`, `kategoriler`, `urunler` ve `tedarikciler` tablolarını oluşturacak ve örnek verileri yükleyecektir.
 
-4. **Veritabanı Bağlantısını Kontrol Edin**:
-   - `db.php` dosyasındaki bağlantı ayarlarını sunucunuza göre güncelleyin:
-     ```php
-     $sunucu = "localhost"; // Sunucu adresi (genellikle localhost)
-     $kullanici = "veritabani_kullanici_adi"; // phpMyAdmin kullanıcı adı
-     $sifre = "veritabani_sifresi"; // phpMyAdmin şifresi
-     $veritabani = "kozmetik"; // Veritabanı adı
+   - Sol menüeden `kozmetik` veritabanını seçin.
+   - Üst menüeden **"İçe Aktar"** sekmesine tıklayın.
+   - Bilgisayarınızdan proje klasöründeki `includes/db.sql` dosyasını seçin.
+   - Sayfanın en altındaki **Git** butonuna tıklayarak dosyayı çalıştırın.
+   - Bu işlemlerle gerekli tablolar (`kullanicilar`, `urunler`) oluşturulur.
+
+4. **Veritabanı Bağlantısını Yapılandırın**:\
+   `includes/db.php` dosyasını açarak aşağıdaki ayarları kendi sisteminize göre düzenleyin:
+
+   ```php
+   $sunucu = "localhost";               
+   $kullanici = "root";                 // Varsayılan phpMyAdmin kullanıcı adı
+   $sifre = "";                        //  Varsayılan şifre
+   $veritabani = "kozmetik";          //   oluşturulan veritabanı
+   ```
+
+5. **Projeyi Tarayıcıda Başlatın**:
+
+   - Proje klasörünü XAMPP'ın `htdocs` dizinine yerleştirin (`C:\xampp\htdocs\kozmetik`).
+   - Tarayıcınızda aşağıdaki adrese gidin:
      ```
-   - Sunucu sağlayıcınız farklı bir MySQL sunucu adresi veya kimlik bilgileri verdiyse, bunları kullanın.
+     http://localhost/kozmetik/
+     ```
 
 ## 📁 Dosya Yapısı
 ```
